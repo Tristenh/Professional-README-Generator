@@ -17,7 +17,7 @@ inquirer
     },
     {
       type: "input",
-      name: "table of contents",
+      name: "tableOfContents",
       message: "list your table of contents (optional)",
     },
     {
@@ -50,8 +50,13 @@ inquirer
     },
     {
       type: "input",
-      name: "questions",
-      message: "enter git hub username and email",
+      name: "git",
+      message: "enter GitHub username",
+    },
+    {
+      type: "input",
+      name: "email",
+      message: "enter email address",
     },
   ])
 
@@ -61,7 +66,9 @@ inquirer
     const dataInfo = `
   # ${data.title}
   ## description 
-    ${data.description} 
+    ${data.description}
+  ## table of contents
+    ${data.tableOfContents} 
   ## installation
     ${data.installation}
   ## usage
@@ -73,7 +80,8 @@ inquirer
   ## tests
     ${data.tests}
   ## questions
-    ${data.questions}`;
+  [Github username](${data.git})
+  [email](${data.email})`;
     fs.writeFile(filename, dataInfo, (err) =>
       err ? console.log(err) : console.log(`success!`)
     );
