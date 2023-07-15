@@ -80,8 +80,8 @@ inquirer
   ## tests
     ${data.tests}
   ## questions
-  [Github username](${data.git})
-  [email](${data.email})`;
+  [Github username](https://github.com/${data.git}?tab=repositories)
+  [email](mailto:${data.email})`;
     fs.writeFile(filename, dataInfo, (err) =>
       err ? console.log(err) : console.log(`success!`)
     );
