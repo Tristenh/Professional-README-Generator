@@ -58,7 +58,23 @@ inquirer
   // TODO: Create a function to write README file
   .then((data) => {
     const filename = "README.md";
-    fs.writeFile(filename, JSON.stringify(data, null, `\t`), (err) =>
+    const dataInfo = `
+  # ${data.title}
+  ## description 
+    ${data.description} 
+  ## installation
+    ${data.installation}
+  ## usage
+    ${data.usage}
+  ## license
+    ${data.license}
+  ## contributing
+    ${data.contributing}
+  ## tests
+    ${data.tests}
+  ## questions
+    ${data.questions}`;
+    fs.writeFile(filename, dataInfo, (err) =>
       err ? console.log(err) : console.log(`success!`)
     );
   });
