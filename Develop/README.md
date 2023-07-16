@@ -1,5 +1,5 @@
 
-  # Hobba's Project
+  # Hobba's project
   ![License: MIT](../images/License-MIT-yellow.svg)
   ## description 
   5 day weather forecast
@@ -16,10 +16,10 @@
   ## installation
   fetch day js data
   ## usage
-  use search bar to query a city name, then return 5 day weather forecast data from day js
+  use search bar to query city name, then return data using day js 
   ## license
   MIT
-  ![Link: MIT](https://opensource.org/licenses/MIT)
+  [Link: MIT](https://opensource.org/licenses/MIT)
   ## contributing
   none
   ## tests
