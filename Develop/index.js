@@ -72,13 +72,13 @@ inquirer
   // TODO: Create a function to write README file
   .then((data) => {
     if ((badge = data.license.includes("MIT"))) {
-      badge = `[![License: MIT](../images/License-MIT-yellow.svg)]`;
+      badge = `![License: MIT](../images/License-MIT-yellow.svg)`;
     } else if ((badge = data.license.includes("GPLv3"))) {
-      badge = `[![License: GPL v3](../images/License-GPLv3-blue.svg)]`;
+      badge = `![License: GPL v3](../images/License-GPLv3-blue.svg)`;
     } else if ((badge = data.license.includes("BSD"))) {
-      badge = `[![License: BSD](../images/License-BSD_3--Clause-blue.svg)]`;
+      badge = `![License: BSD](../images/License-BSD_3--Clause-blue.svg)`;
     } else if ((badge = data.license.includes("Apache 2.0"))) {
-      badge = `[![License: Apache](../images/License-Apache_2.0-blue.svg)]`;
+      badge = `![License: Apache](../images/License-Apache_2.0-blue.svg)`;
     }
     const tableOfContentsLinks = data.tableOfContents
       .map((choices) => `\n[${choices}](#${choices})`)

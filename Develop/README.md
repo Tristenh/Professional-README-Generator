@@ -1,6 +1,6 @@
 
   # 123
-  [![License: BSD](../images/License-BSD_3--Clause-blue.svg)]
+  ![License: MIT](../images/License-MIT-yellow.svg)
   ## description 
   123
   ## table of contents 
@@ -18,7 +18,7 @@
   ## usage
   123
   ## license
-  BSD
+  MIT
   ## contributing
   123
   ## tests
