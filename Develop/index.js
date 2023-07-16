@@ -1,7 +1,8 @@
-// TODO: Include packages needed for this application
+//  packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-// TODO: Create an array of questions for user input
+
+//  array of questions for user input
 inquirer
   .prompt([
     {
@@ -69,7 +70,7 @@ inquirer
     },
   ])
 
-  // TODO: Create a function to write README file
+  // display license badge and license link
   .then((data) => {
     if ((badge = data.license.includes("MIT"))) {
       badge = `![License: MIT](../images/License-MIT-yellow.svg)`;
@@ -84,6 +85,7 @@ inquirer
       badge = `![License: Apache](../images/License-Apache_2.0-blue.svg)`;
       link = `[Link: Apache](https://opensource.org/licenses/Apache-2.0)`;
     }
+    // generate markdown
     const tableOfContentsLinks = data.tableOfContents
       .map((choices) => `\n[${choices}](#${choices})`)
       .join("");
@@ -110,13 +112,9 @@ inquirer
   if any questions relating to this application please reach out using the below links
   [GitHub: ${data.git}](https://github.com/${data.git}?tab=repositories)
   [${data.email}](mailto:${data.email})`;
+
+    //  write README file
     fs.writeFile(filename, dataInfo, (err) =>
       err ? console.log(err) : console.log(`success!`)
     );
   });
-
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
