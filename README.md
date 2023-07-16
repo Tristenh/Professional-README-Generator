@@ -4,6 +4,7 @@ Are you struggling to produce a high quality README, or just dont have the time 
 ## usage 
 in vs code in develop file open index.js in intergrated terminal, type node index.js to start the application
 ## walkthrough video
+[Professional README Generator Tristen_ Jul 16, 2023 8_34 PM.webm](https://github.com/Tristenh/Professional-README-Generator/assets/121472192/f8246a40-3acf-442e-8c55-444deb3cb4cb)
 
 ## example of a created README.md file useing Tristen's Pofessional README Generator
 ![Screenshot (101)](https://github.com/Tristenh/Professional-README-Generator/assets/121472192/d16b6aef-8a74-41d2-aad7-093c700ef2fe)
