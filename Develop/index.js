@@ -81,7 +81,7 @@ inquirer
       badge = `[![License: Apache](../images/License-Apache_2.0-blue.svg)]`;
     }
     const tableOfContentsLinks = data.tableOfContents
-      .map((choices) => `\n[table of contents](#${choices})`)
+      .map((choices) => `\n[${choices}](#${choices})`)
       .join("");
     const filename = "README.md";
     const dataInfo = `
