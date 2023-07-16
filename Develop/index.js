@@ -73,12 +73,16 @@ inquirer
   .then((data) => {
     if ((badge = data.license.includes("MIT"))) {
       badge = `![License: MIT](../images/License-MIT-yellow.svg)`;
+      link = `![Link: MIT](https://opensource.org/licenses/MIT)`;
     } else if ((badge = data.license.includes("GPLv3"))) {
       badge = `![License: GPL v3](../images/License-GPLv3-blue.svg)`;
+      link = `![Link: GPL v3](https://www.gnu.org/licenses/gpl-3.0)`;
     } else if ((badge = data.license.includes("BSD"))) {
       badge = `![License: BSD](../images/License-BSD_3--Clause-blue.svg)`;
+      link = `![Link: BSD](https://opensource.org/licenses/BSD-3-Clause)`;
     } else if ((badge = data.license.includes("Apache 2.0"))) {
       badge = `![License: Apache](../images/License-Apache_2.0-blue.svg)`;
+      link = `![Link: Apache](https://opensource.org/licenses/Apache-2.0)`;
     }
     const tableOfContentsLinks = data.tableOfContents
       .map((choices) => `\n[${choices}](#${choices})`)
@@ -97,6 +101,7 @@ inquirer
   ${data.usage}
   ## license
   ${data.license}
+  ${link}
   ## contributing
   ${data.contributing}
   ## tests

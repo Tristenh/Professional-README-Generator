@@ -1,8 +1,8 @@
 
-  # 123
+  # Hobba's Project
   ![License: MIT](../images/License-MIT-yellow.svg)
   ## description 
-  123
+  5 day weather forecast
   ## table of contents 
   
 [description](#description)
@@ -14,16 +14,17 @@
 [questions](#questions)
 
   ## installation
-  123
+  fetch day js data
   ## usage
-  123
+  use search bar to query a city name, then return 5 day weather forecast data from day js
   ## license
   MIT
+  ![Link: MIT](https://opensource.org/licenses/MIT)
   ## contributing
-  123
+  none
   ## tests
-  123
+  none
   ## questions
   if any questions relating to this application please reach out using the below links
-  [Github username](https://github.com/123?tab=repositories)
-  [email](mailto:123)
+  [Github username](https://github.com/Tristenh?tab=repositories)
+  [email](mailto:tristenhobba1@gmail.com)
