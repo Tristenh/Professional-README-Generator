@@ -103,13 +103,13 @@ inquirer
   ${data.license}
   ${link}
   ## contributing
-  ${data.contributing}
+  [GitHub: ${data.contributing}](https://github.com/${data.contributing}?tab=repositories)
   ## tests
   ${data.tests}
   ## questions
   if any questions relating to this application please reach out using the below links
-  [Github username](https://github.com/${data.git}?tab=repositories)
-  [email](mailto:${data.email})`;
+  [GitHub: ${data.git}](https://github.com/${data.git}?tab=repositories)
+  [${data.email}](mailto:${data.email})`;
     fs.writeFile(filename, dataInfo, (err) =>
       err ? console.log(err) : console.log(`success!`)
     );
