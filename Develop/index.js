@@ -16,9 +16,18 @@ inquirer
         "Provide a short description explaining the what, why, and how of your project",
     },
     {
-      type: "input",
+      type: "checkbox",
       name: "tableOfContents",
       message: "list your table of contents (optional)",
+      choices: [
+        "description",
+        "installation",
+        "usage",
+        "license",
+        "contributing",
+        "tests",
+        "questions",
+      ],
     },
     {
       type: "input",
@@ -62,24 +71,28 @@ inquirer
 
   // TODO: Create a function to write README file
   .then((data) => {
+    const tableOfContentsLinks = data.tableOfContents
+      .map((choices) => `\n[](#${choices})`)
+      .join("");
     const filename = "README.md";
     const dataInfo = `
   # ${data.title}
   ## description 
-    ${data.description}
-  ## table of contents
-    ${data.tableOfContents} 
+  ${data.description}
+  ## table of contents 
+  ${tableOfContentsLinks}\n
   ## installation
-    ${data.installation}
+  ${data.installation}
   ## usage
-    ${data.usage}
+  ${data.usage}
   ## license
-    ${data.license}
+  ${data.license}
   ## contributing
-    ${data.contributing}
+  ${data.contributing}
   ## tests
-    ${data.tests}
+  ${data.tests}
   ## questions
+  if any questions relating to this application please reach out using the below links
   [Github username](https://github.com/${data.git}?tab=repositories)
   [email](mailto:${data.email})`;
     fs.writeFile(filename, dataInfo, (err) =>
